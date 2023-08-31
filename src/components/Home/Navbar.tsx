@@ -34,19 +34,19 @@ const Navbar: React.FC<Props> = ({ sections }) => {
     }, [sections]);
 
     return (
-        <div className={"fixed top-0 left-0 w-full flex justify-between items-center bg-slate-50 py-5 px-5 md:px-5 lg:px-7 bg-opacity-80 shadow-md shadow-gray-500 z-20 transition-all duration-200 "}>
-            {/* (isNavbar ? "translate-y-0" : "-translate-y-full")}> */}
+        <div className={"fixed top-0 left-0 w-full flex justify-between items-center bg-slate-50 py-5 px-5 md:px-5 lg:px-7 bg-opacity-80 shadow-md shadow-gray-500 z-20"}> 
+            {/*  +" transition-all duration-200 "+(isNavbar ? "translate-y-0" : "-translate-y-full")}> */}
             <div className="ml-0 md:ml-2">
-                <p className="flex items-center text-4xl text-black font-bold cursor-pointer"
+                <p className="flex items-center text-3xl md:text-4xl text-black font-bold cursor-pointer"
                     onClick={() => scrollToElement(sections[sections.length - 1])}>
-                    <span className="mr-3 text-5xl"><Icon /></span>{"Wasin Saetie"}
+                    <span className="mr-1 md:mr-3 text-4xl md:text-5xl"><Icon /></span>{"Wasin Saetie"}
                 </p>
             </div>
             <ul className="hidden space-x-3 md:flex">
                 {sections.map((section) => (
                     <li key={section} className={"flex flex-col items-center group"}>
                         <button
-                            className={"text-black text-lg transition ease-in-out px-4 py-2 border-b-2 border-transparent " + (activeSection === section ? "text-slate-50 bg-gradient-to-r from-gray-700 to-gray-500 rounded-md font-bold shadow-md shadow-gray-500" : "group-hover:scale-110")}
+                            className={"text-black text-lg transition-transform ease-in-out px-4 py-2 border-b-2 border-transparent " + (activeSection === section ? "text-slate-50 bg-gradient-to-r from-gray-700 to-gray-500 rounded-md font-bold shadow-md shadow-gray-500" : "group-hover:scale-110")}
                             onClick={() => scrollToElement(section)}
                         >
                             {section}

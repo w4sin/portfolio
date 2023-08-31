@@ -8,7 +8,7 @@ const sections: string[] = ["Home", "Practice", "Skills", "About Me"];
 
 const Home = () => {
     return (
-        <main>
+        <main className="max-w-screen overflow-x-hidden">
             <Navbar sections={sections} />
             <Welcome />
             <Practice />

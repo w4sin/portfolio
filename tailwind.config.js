@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        nohover: { raw: "(hover: none)" },
+      },
       keyframes: {
         wiggle: {
           "0%": { width: 0 },
@@ -11,8 +14,8 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['PT Sans', 'sans-serif']
-    }
+      sans: ["PT Sans", "sans-serif"],
+    },
   },
   plugins: [
     function ({ addUtilities }) {
